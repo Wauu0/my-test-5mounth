@@ -1,4 +1,3 @@
-// src/App.js
 import React from 'react';
 import RegistrationForm from './Components/RegistrationForm';
 
