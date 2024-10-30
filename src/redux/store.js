@@ -1,21 +1,12 @@
 import { createStore } from 'redux';
 
-const initialState = {
-  isRegistered: false,
-  registeredUsers: [],
-};
+import { configureStore } from '@reduxjs/toolkit';
+import postsReducer from './PostSlice';
 
-const reducer = (state = initialState, action) => {
-  switch (action.type) {
-     case 'REGISTER_USER':
-      return {
-        ...state,
-        isRegistered: true,
-        registeredUsers: [...state.registeredUsers, action.payload]
-      };
-    default:
-      return state;
-  }
-};
+const store = configureStore({
+  reducer: {
+    posts: postsReducer,
+  },
+});
 
-export const store = createStore(reducer);
+export default store;

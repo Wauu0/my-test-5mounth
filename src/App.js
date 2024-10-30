@@ -1,12 +1,15 @@
 import React from 'react';
-import RegistrationForm from './Components/RegistrationForm';
+import PostsList from "./Components/PostList";
+import "./App.css"
 
-const App = () => {
+
+function App() {
   return (
     <div className="App">
-      <RegistrationForm />
+      <h1>Список постов</h1>
+      <PostsList/>
     </div>
   );
-};
+}
 
 export default App;
